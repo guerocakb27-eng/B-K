@@ -11,37 +11,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Particle Canvas Background -->
     <canvas id="particle-canvas"></canvas>
 
-    <!-- Navigation -->
     <header class="nav" id="nav">
         <div class="nav__container">
-            <a href="#hero" class="nav__logo">
-                B<span class="nav__logo-accent">&</span>K
-            </a>
+            <a href="#hero" class="nav__logo">B<span class="nav__logo-accent">&</span>K</a>
             <nav class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#services" class="nav__link">Leistungen</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">Über Uns</a></li>
                     <li class="nav__item"><a href="#process" class="nav__link">Prozess</a></li>
+                    <li class="nav__item"><a href="#faq" class="nav__link">FAQ</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Kontakt</a></li>
                 </ul>
             </nav>
             <a href="#contact" class="nav__cta">Projekt starten</a>
             <button class="nav__toggle" id="nav-toggle" aria-label="Menü öffnen">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="hero">
+        <div class="hero__bg-glow"></div>
         <div class="hero__container">
             <div class="hero__content">
-                <p class="hero__tagline reveal">Digitale Exzellenz für Ihr Unternehmen</p>
+                <div class="hero__badge reveal">
+                    <span class="hero__badge-dot"></span>
+                    Neu: KI-Rezeptionisten für Ihr Unternehmen
+                </div>
                 <h1 class="hero__title reveal reveal--delay-1">
                     Wir bauen digitale<br>
                     <span class="hero__title-highlight">Erlebnisse</span>, die<br>
@@ -60,41 +58,77 @@
                     </a>
                     <a href="#services" class="btn btn--ghost">Leistungen entdecken</a>
                 </div>
+                <div class="hero__trust reveal reveal--delay-3">
+                    <div class="hero__trust-item">
+                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none"><path d="M9 12l2 2 4-4M10 2a8 8 0 100 16A8 8 0 0010 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Kostenlose Erstberatung
+                    </div>
+                    <div class="hero__trust-item">
+                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none"><path d="M9 12l2 2 4-4M10 2a8 8 0 100 16A8 8 0 0010 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Monatlich kündbar
+                    </div>
+                    <div class="hero__trust-item">
+                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none"><path d="M9 12l2 2 4-4M10 2a8 8 0 100 16A8 8 0 0010 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Antwort in 24h
+                    </div>
+                </div>
             </div>
-            <div class="hero__scroll-indicator reveal reveal--delay-3">
-                <div class="hero__scroll-line"></div>
-                <span>Scroll</span>
+            <div class="hero__visual reveal reveal--delay-2">
+                <div class="hero__visual-inner">
+                    <div class="hero__orb"></div>
+                    <div class="hero__orb-ring"></div>
+                    <div class="hero__metric hero__metric--1">
+                        <div class="hero__metric-icon">
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M3 17l4-4 3 3 4-5 4 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div>
+                            <p class="hero__metric-value">+127%</p>
+                            <p class="hero__metric-label">Organischer Traffic</p>
+                        </div>
+                    </div>
+                    <div class="hero__metric hero__metric--2">
+                        <div class="hero__metric-icon hero__metric-icon--alt">
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2z" stroke="currentColor" stroke-width="2"/><path d="M10 6v4l2.5 2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <div>
+                            <p class="hero__metric-value">99/100</p>
+                            <p class="hero__metric-label">Performance Score</p>
+                        </div>
+                    </div>
+                    <div class="hero__metric hero__metric--3">
+                        <div class="hero__metric-icon">
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M18 10a8 8 0 01-11.314 7.243L2 18l.757-4.686A8 8 0 1118 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="10" r="1" fill="currentColor"/><circle cx="10" cy="10" r="1" fill="currentColor"/><circle cx="13" cy="10" r="1" fill="currentColor"/></svg>
+                        </div>
+                        <div>
+                            <p class="hero__metric-value">24/7</p>
+                            <p class="hero__metric-label">KI-Rezeptionist</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="hero__scroll-indicator">
+            <div class="hero__scroll-line"></div>
+            <span>Scroll</span>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
                 <p class="section-header__tag reveal">Was wir tun</p>
-                <h2 class="section-header__title reveal reveal--delay-1">
-                    Drei Säulen für Ihren<br>digitalen Erfolg
-                </h2>
+                <h2 class="section-header__title reveal reveal--delay-1">Drei Säulen für Ihren<br>digitalen Erfolg</h2>
             </div>
             <div class="services__grid" data-spotlight-container>
-                <!-- SEO -->
                 <article class="service-card reveal" data-spotlight>
                     <div class="service-card__glow"></div>
                     <div class="service-card__content">
                         <div class="service-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                <path d="M18 30c6.627 0 12-5.373 12-12S24.627 6 18 6 6 11.373 6 18s5.373 12 12 12z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                                <path d="M34 34l-7.5-7.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                                <path d="M14 16l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><path d="M18 30c6.627 0 12-5.373 12-12S24.627 6 18 6 6 11.373 6 18s5.373 12 12 12z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M34 34l-7.5-7.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M14 16l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </div>
                         <div class="service-card__number">01</div>
                         <h3 class="service-card__title">SEO</h3>
-                        <p class="service-card__text">
-                            Sichtbarkeit, die zählt. Wir optimieren Ihre Präsenz in Suchmaschinen
-                            und KI-Plattformen — damit Kunden Sie finden, bevor sie die Konkurrenz finden.
-                        </p>
+                        <p class="service-card__text">Sichtbarkeit, die zählt. Wir optimieren Ihre Präsenz in Suchmaschinen und KI-Plattformen — damit Kunden Sie finden, bevor sie die Konkurrenz finden.</p>
                         <ul class="service-card__features">
                             <li>Technisches SEO</li>
                             <li>Content-Strategie</li>
@@ -104,26 +138,15 @@
                     </div>
                 </article>
 
-                <!-- Webdesign -->
                 <article class="service-card reveal reveal--delay-1" data-spotlight>
                     <div class="service-card__glow"></div>
                     <div class="service-card__content">
                         <div class="service-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                <rect x="5" y="7" width="30" height="22" rx="3" stroke="currentColor" stroke-width="2.5"/>
-                                <path d="M5 14h30" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="9" cy="10.5" r="1.2" fill="currentColor"/>
-                                <circle cx="13" cy="10.5" r="1.2" fill="currentColor"/>
-                                <circle cx="17" cy="10.5" r="1.2" fill="currentColor"/>
-                                <path d="M14 34h12M20 29v5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                            </svg>
+                            <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><rect x="5" y="7" width="30" height="22" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M5 14h30" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="10.5" r="1.2" fill="currentColor"/><circle cx="13" cy="10.5" r="1.2" fill="currentColor"/><circle cx="17" cy="10.5" r="1.2" fill="currentColor"/><path d="M14 34h12M20 29v5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
                         </div>
                         <div class="service-card__number">02</div>
                         <h3 class="service-card__title">Webdesign & Entwicklung</h3>
-                        <p class="service-card__text">
-                            Websites, die beeindrucken und konvertieren. Wir gestalten schnelle,
-                            responsive Erlebnisse — vom ersten Pixel bis zum letzten Deploy.
-                        </p>
+                        <p class="service-card__text">Websites, die beeindrucken und konvertieren. Wir gestalten schnelle, responsive Erlebnisse — vom ersten Pixel bis zum letzten Deploy.</p>
                         <ul class="service-card__features">
                             <li>UI/UX Design</li>
                             <li>Responsive Entwicklung</li>
@@ -133,37 +156,31 @@
                     </div>
                 </article>
 
-                <!-- KI-Rezeptionisten -->
                 <article class="service-card reveal reveal--delay-2" data-spotlight>
                     <div class="service-card__glow"></div>
                     <div class="service-card__content">
-                        <div class="service-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                <path d="M20 6v2M20 32v2M6 20h2M32 20h2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                                <circle cx="20" cy="20" r="10" stroke="currentColor" stroke-width="2.5"/>
-                                <path d="M16 17v0a1 1 0 011-1h0a1 1 0 011 1v0M22 17v0a1 1 0 011-1h0a1 1 0 011 1v0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M15.5 23a5.5 5.5 0 009 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                        <div class="service-card__icon service-card__icon--ai">
+                            <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><path d="M20 6v2M20 32v2M6 20h2M32 20h2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="20" cy="20" r="10" stroke="currentColor" stroke-width="2.5"/><path d="M16 17v0a1 1 0 011-1h0a1 1 0 011 1v0M22 17v0a1 1 0 011-1h0a1 1 0 011 1v0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M15.5 23a5.5 5.5 0 009 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                         </div>
                         <div class="service-card__number">03</div>
                         <h3 class="service-card__title">KI-Rezeptionisten</h3>
-                        <p class="service-card__text">
-                            Ihr digitaler Empfang — rund um die Uhr. Intelligente KI-Assistenten,
-                            die Anfragen beantworten, Termine buchen und Kunden begeistern.
-                        </p>
+                        <p class="service-card__text">Ihr digitaler Empfang — rund um die Uhr. Intelligente KI-Assistenten, die Anfragen beantworten, Termine buchen und Kunden begeistern.</p>
                         <ul class="service-card__features">
                             <li>24/7 Verfügbarkeit</li>
                             <li>Natürliche Konversation</li>
                             <li>Terminbuchung</li>
                             <li>Nahtlose Integration</li>
                         </ul>
+                        <div class="service-card__chat">
+                            <div class="chat-bubble chat-bubble--in">Haben Sie morgen um 10 Uhr einen Termin frei?</div>
+                            <div class="chat-bubble chat-bubble--out">Ja! Dienstag 10:00 Uhr ist eingetragen.</div>
+                        </div>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Stats Banner -->
     <section class="stats">
         <div class="container">
             <div class="stats__grid">
@@ -187,81 +204,121 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-header__tag reveal">Kundenstimmen</p>
+                <h2 class="section-header__title reveal reveal--delay-1">Was unsere Kunden sagen</h2>
+            </div>
+            <div class="testimonials__grid">
+                <article class="testimonial-card reveal">
+                    <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-card__text">&ldquo;Seitdem wir den KI-Rezeptionisten nutzen, verpasst unsere Praxis keine Anfrage mehr. Die Terminbuchungen stiegen um 40&nbsp;% &mdash; ohne zusätzlichen Aufwand für unser Team.&rdquo;</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">TM</div>
+                        <div>
+                            <p class="testimonial-card__name">Dr. Thomas Meier</p>
+                            <p class="testimonial-card__company">Zahnarztpraxis Meier, München</p>
+                        </div>
+                    </div>
+                    <span class="testimonial-card__service">KI-Rezeptionist</span>
+                </article>
+                <article class="testimonial-card reveal reveal--delay-1">
+                    <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-card__text">&ldquo;B&K hat unseren Google-Traffic in 5 Monaten verdreifacht. Wir ranken jetzt für Keywords, die uns vorher unerreichbar schienen. Die Investition hat sich mehr als gelohnt.&rdquo;</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar testimonial-card__avatar--2">SL</div>
+                        <div>
+                            <p class="testimonial-card__name">Sarah Lindner</p>
+                            <p class="testimonial-card__company">Online-Boutique, Hamburg</p>
+                        </div>
+                    </div>
+                    <span class="testimonial-card__service">SEO</span>
+                </article>
+                <article class="testimonial-card reveal reveal--delay-2">
+                    <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-card__text">&ldquo;Unsere neue Website ist blitzschnell und sieht professionell aus. Kunden sprechen uns direkt darauf an. B&K war die beste Entscheidung für unser Unternehmen.&rdquo;</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar testimonial-card__avatar--3">MB</div>
+                        <div>
+                            <p class="testimonial-card__name">Markus Becker</p>
+                            <p class="testimonial-card__company">Handwerksbetrieb Becker, Berlin</p>
+                        </div>
+                    </div>
+                    <span class="testimonial-card__service">Webdesign</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <section class="about" id="about">
         <div class="container">
             <div class="section-header">
                 <p class="section-header__tag reveal">Wer wir sind</p>
-                <h2 class="section-header__title reveal reveal--delay-1">
-                    Die Köpfe hinter B&K
-                </h2>
-                <p class="section-header__description reveal reveal--delay-2">
-                    Zwei Gründer, eine Vision: Kleinen Unternehmen und Startups den
-                    Zugang zu erstklassigem Digitalmarketing ermöglichen.
-                </p>
+                <h2 class="section-header__title reveal reveal--delay-1">Die Köpfe hinter B&amp;K</h2>
+                <p class="section-header__description reveal reveal--delay-2">Zwei Gründer, eine Vision: Kleinen Unternehmen und Startups den Zugang zu erstklassigem Digitalmarketing ermöglichen.</p>
             </div>
             <div class="about__team">
                 <div class="team-card reveal">
                     <div class="team-card__image">
-                        <div class="team-card__placeholder">B</div>
+                        <div class="team-card__placeholder team-card__placeholder--b">B</div>
                     </div>
                     <h3 class="team-card__name">Boran</h3>
                     <p class="team-card__role">[Rolle wird ergänzt]</p>
-                    <p class="team-card__bio">
-                        Mit Leidenschaft für digitale Innovation und einem klaren Blick
-                        für Ergebnisse, die zählen.
-                    </p>
+                    <p class="team-card__bio">Mit Leidenschaft für digitale Innovation und einem klaren Blick für Ergebnisse, die zählen.</p>
                 </div>
                 <div class="team-card reveal reveal--delay-1">
                     <div class="team-card__image">
-                        <div class="team-card__placeholder">K</div>
+                        <div class="team-card__placeholder team-card__placeholder--k">K</div>
                     </div>
                     <h3 class="team-card__name">Kayra</h3>
                     <p class="team-card__role">[Rolle wird ergänzt]</p>
-                    <p class="team-card__bio">
-                        Kreativität trifft Strategie — für digitale Lösungen,
-                        die Unternehmen nach vorne bringen.
-                    </p>
+                    <p class="team-card__bio">Kreativität trifft Strategie — für digitale Lösungen, die Unternehmen nach vorne bringen.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
     <section class="process" id="process">
         <div class="container">
             <div class="section-header">
                 <p class="section-header__tag reveal">Wie wir arbeiten</p>
-                <h2 class="section-header__title reveal reveal--delay-1">
-                    Von der Idee zum Ergebnis
-                </h2>
+                <h2 class="section-header__title reveal reveal--delay-1">Von der Idee zum Ergebnis</h2>
             </div>
             <div class="process__timeline">
                 <div class="process__step reveal">
-                    <div class="process__step-number">01</div>
+                    <div class="process__step-number">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
                     <div class="process__step-content">
-                        <h3>Analyse & Strategie</h3>
+                        <h3>Analyse &amp; Strategie</h3>
                         <p>Wir verstehen Ihr Geschäft, Ihre Ziele und Ihre Zielgruppe — und entwickeln eine maßgeschneiderte Strategie.</p>
                     </div>
                 </div>
                 <div class="process__step reveal reveal--delay-1">
-                    <div class="process__step-number">02</div>
+                    <div class="process__step-number">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
                     <div class="process__step-content">
-                        <h3>Design & Entwicklung</h3>
+                        <h3>Design &amp; Entwicklung</h3>
                         <p>Vom Wireframe zum fertigen Produkt — mit regelmäßigem Feedback und transparenter Kommunikation.</p>
                     </div>
                 </div>
                 <div class="process__step reveal reveal--delay-1">
-                    <div class="process__step-number">03</div>
+                    <div class="process__step-number">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
                     <div class="process__step-content">
-                        <h3>Launch & Optimierung</h3>
+                        <h3>Launch &amp; Optimierung</h3>
                         <p>Go-Live ist erst der Anfang. Wir optimieren kontinuierlich für bessere Rankings und höhere Conversions.</p>
                     </div>
                 </div>
                 <div class="process__step reveal reveal--delay-2">
-                    <div class="process__step-number">04</div>
+                    <div class="process__step-number">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
                     <div class="process__step-content">
-                        <h3>Wachstum & Support</h3>
+                        <h3>Wachstum &amp; Support</h3>
                         <p>Langfristige Partnerschaft statt einmaliger Auftrag — wir begleiten Ihr Wachstum mit datengetriebenen Entscheidungen.</p>
                     </div>
                 </div>
@@ -269,25 +326,87 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-header__tag reveal">FAQ</p>
+                <h2 class="section-header__title reveal reveal--delay-1">Häufige Fragen</h2>
+            </div>
+            <div class="faq__list">
+                <div class="faq__item reveal">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Wie lange dauert ein Webdesign-Projekt?</span>
+                        <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Ein typisches Webdesign-Projekt dauert bei uns 4–8 Wochen — je nach Umfang und Anforderungen. Sie erhalten von Anfang an einen klaren Zeitplan mit regelmäßigen Updates.</p>
+                    </div>
+                </div>
+                <div class="faq__item reveal reveal--delay-1">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Sind Ihre Leistungen auch für sehr kleine Unternehmen erschwinglich?</span>
+                        <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Ja, absolut. Wir bieten flexible Pakete an, die auf das Budget kleiner Unternehmen und Startups zugeschnitten sind. In der kostenlosen Erstberatung finden wir die passende Lösung für Sie.</p>
+                    </div>
+                </div>
+                <div class="faq__item reveal reveal--delay-1">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Wie funktioniert der KI-Rezeptionist genau?</span>
+                        <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Unser KI-Rezeptionist wird auf Ihr Unternehmen trainiert und beantwortet automatisch Kundenanfragen, bucht Termine und leitet komplexere Anfragen an Sie weiter. Er ist über Ihre Website, WhatsApp oder andere Kanäle erreichbar — 24 Stunden am Tag, 7 Tage die Woche.</p>
+                    </div>
+                </div>
+                <div class="faq__item reveal reveal--delay-2">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Wie schnell sehe ich erste SEO-Ergebnisse?</span>
+                        <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>SEO ist eine langfristige Investition. Erste messbare Verbesserungen sehen die meisten Kunden nach 3–6 Monaten. Technische Fixes und lokale SEO-Maßnahmen können bereits früher Wirkung zeigen.</p>
+                    </div>
+                </div>
+                <div class="faq__item reveal reveal--delay-2">
+                    <button class="faq__question" aria-expanded="false">
+                        <span>Gibt es langfristige Verträge oder ist monatliche Kündigung möglich?</span>
+                        <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Unsere laufenden Leistungen (SEO, KI-Rezeptionist) sind monatlich kündbar — ohne versteckte Klauseln. Projektarbeiten (Webdesign) werden als Einmalprojekt abgerechnet. Wir setzen auf echte Partnerschaft, nicht auf Vertragsbindung.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact__grid">
                 <div class="contact__info">
                     <p class="section-header__tag reveal">Kontakt</p>
-                    <h2 class="section-header__title reveal reveal--delay-1">
-                        Lassen Sie uns über<br>Ihr Projekt sprechen.
-                    </h2>
-                    <p class="contact__description reveal reveal--delay-2">
-                        Bereit für den nächsten Schritt? Erzählen Sie uns von Ihrem Vorhaben
-                        — wir melden uns innerhalb von 24 Stunden.
-                    </p>
+                    <h2 class="section-header__title reveal reveal--delay-1">Lassen Sie uns über<br>Ihr Projekt sprechen.</h2>
+                    <p class="contact__description reveal reveal--delay-2">Bereit für den nächsten Schritt? Erzählen Sie uns von Ihrem Vorhaben — wir melden uns innerhalb von 24 Stunden.</p>
                     <div class="contact__details reveal reveal--delay-2">
                         <div class="contact__detail">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M3 5l7 5 7-5M3 5h14v10H3V5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5l7 5 7-5M3 5h14v10H3V5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
                             <a href="mailto:hallo@bk-agentur.de">hallo@bk-agentur.de</a>
+                        </div>
+                        <div class="contact__detail">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 18a8 8 0 100-16 8 8 0 000 16z" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l2.5 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            <span>Antwort in 24 Stunden</span>
+                        </div>
+                    </div>
+                    <div class="contact__badges reveal reveal--delay-3">
+                        <div class="contact__badge">
+                            <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M9 12l2 2 4-4M10 2a8 8 0 100 16A8 8 0 0010 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Kostenlose Erstberatung
+                        </div>
+                        <div class="contact__badge">
+                            <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M9 12l2 2 4-4M10 2a8 8 0 100 16A8 8 0 0010 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Monatlich kündbar
                         </div>
                     </div>
                 </div>
@@ -305,7 +424,7 @@
                         <select id="service" name="service" class="form__input form__select">
                             <option value="" disabled selected>Leistung wählen</option>
                             <option value="seo">SEO</option>
-                            <option value="webdesign">Webdesign & Entwicklung</option>
+                            <option value="webdesign">Webdesign &amp; Entwicklung</option>
                             <option value="ki">KI-Rezeptionist</option>
                             <option value="all">Gesamtpaket</option>
                         </select>
@@ -316,24 +435,27 @@
                     </div>
                     <button type="submit" class="btn btn--primary btn--full">
                         <span>Nachricht senden</span>
-                        <svg class="btn__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <svg class="btn__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
                 <div class="footer__brand">
-                    <a href="#hero" class="nav__logo">
-                        B<span class="nav__logo-accent">&</span>K
-                    </a>
+                    <a href="#hero" class="nav__logo">B<span class="nav__logo-accent">&</span>K</a>
                     <p class="footer__tagline">Digitale Exzellenz für kleine Unternehmen und Startups.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/></svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer__links">
                     <h4>Navigation</h4>
@@ -341,6 +463,7 @@
                         <li><a href="#services">Leistungen</a></li>
                         <li><a href="#about">Über Uns</a></li>
                         <li><a href="#process">Prozess</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                         <li><a href="#contact">Kontakt</a></li>
                     </ul>
                 </div>
@@ -352,9 +475,16 @@
                         <li><a href="#services">KI-Rezeptionisten</a></li>
                     </ul>
                 </div>
+                <div class="footer__links">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="/impressum">Impressum</a></li>
+                        <li><a href="/datenschutz">Datenschutzerklärung</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer__bottom">
-                <p>&copy; 2026 B&K (Boran & Kayra). Alle Rechte vorbehalten.</p>
+                <p>&copy; 2026 B&amp;K (Boran &amp; Kayra). Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>
