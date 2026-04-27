@@ -14,8 +14,8 @@
         canvas: null, ctx: null, particles: [], mouse: { x: null, y: null }, animationId: null,
         config: {
             particleCount: 60,
-            particleColor: 'rgba(79, 138, 255,',
-            lineColor: 'rgba(79, 138, 255,',
+            particleColor: 'rgba(255, 255, 255,',
+            lineColor: 'rgba(255, 255, 255,',
             maxDistance: 150,
             particleSize: { min: 1, max: 2 },
             speed: 0.3,
