@@ -14,8 +14,8 @@
         canvas: null, ctx: null, particles: [], mouse: { x: null, y: null }, animationId: null,
         config: {
             particleCount: 60,
-            particleColor: 'rgba(255, 255, 255,',
-            lineColor: 'rgba(255, 255, 255,',
+            particleColor: 'rgba(129, 140, 248,',
+            lineColor: 'rgba(99, 102, 241,',
             maxDistance: 150,
             particleSize: { min: 1, max: 2 },
             speed: 0.3,
@@ -279,31 +279,54 @@
     };
 
     // ==========================================================================
-    // CONTACT FORM
+    // CONTACT FORM — Formspree AJAX
     // ==========================================================================
     const ContactForm = {
         init() {
             const form = document.getElementById('contact-form');
             if (!form) return;
 
-            form.addEventListener('submit', (e) => {
+            form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const btn = form.querySelector('.btn');
                 const span = btn.querySelector('span');
                 const original = span.textContent;
-                span.textContent = 'Wird gesendet...';
-                btn.style.pointerEvents = 'none';
 
-                setTimeout(() => {
-                    span.textContent = 'Gesendet!';
-                    btn.style.opacity = '0.7';
+                span.textContent = 'Wird gesendet…';
+                btn.disabled = true;
+                btn.style.opacity = '0.7';
+
+                try {
+                    const response = await fetch('https://formspree.io/f/xpwqkpgo', {
+                        method: 'POST',
+                        headers: { 'Accept': 'application/json' },
+                        body: new FormData(form),
+                    });
+
+                    if (response.ok) {
+                        span.textContent = '✓ Nachricht gesendet!';
+                        btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+                        btn.style.color = '#fff';
+                        setTimeout(() => {
+                            span.textContent = original;
+                            btn.disabled = false;
+                            btn.style.opacity = '';
+                            btn.style.background = '';
+                            btn.style.color = '';
+                            form.reset();
+                        }, 3000);
+                    } else {
+                        throw new Error('Server error');
+                    }
+                } catch {
+                    span.textContent = 'Fehler — bitte per E-Mail kontaktieren';
+                    btn.style.opacity = '0.5';
                     setTimeout(() => {
                         span.textContent = original;
-                        btn.style.pointerEvents = '';
+                        btn.disabled = false;
                         btn.style.opacity = '';
-                        form.reset();
-                    }, 2000);
-                }, 1500);
+                    }, 3000);
+                }
             });
         },
     };
